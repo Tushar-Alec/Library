@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(title, author, pages , hasRead) {
     this.title = title;
     this.author = author;
@@ -9,8 +11,22 @@ function Book(title, author, pages , hasRead) {
       };
 }
 
-const book1 = new Book('70 days', 'abc' , '240' , 'read');
 
-const book2 = new Book('The art of war', 'sun tzu' , '200' ,'');
+function addBookToLibrary() {
+  const  title = prompt( 'Please enter the books title:');
+  const author = prompt('Enter the authors name:');
+  const pages = prompt('How many pages does this book have?');
+  const hasRead = prompt("Have you read the book? (yes/no)").toLowerCase();
 
-console.log(book2.info());
+const isValidReadStatus = hasRead === 'yes' || hasRead === 'no';
+    if (!isValidReadStatus) {
+        alert("Invalid input for 'hasRead' field. Please enter 'yes' or 'no'.");
+        return;
+    }
+
+    const newBook = new Book(title, author, pages, hasRead === 'yes');
+    myLibrary.push(newBook);
+  }
+
+addBookToLibrary();
+console.log(myLibrary);
