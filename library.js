@@ -28,3 +28,9 @@ function addBookToLibrary() {
 
 addBookToLibrary();
 console.log(myLibrary);
+
+let newbookbtn = document.querySelector("#new-book-button");
+let newbookform = document.querySelector("#new-book-form");
+newbookbtn.addEventListener("click", function () {
+    newbookform.style.display = "block";
+});
