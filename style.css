@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  pad: 0;
+}
+.newbook-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#new-book-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    margin: 75px;
+}
+
+#new-book-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tomato;
+    padding: 50px;
+}
+#new-book-form input {
+    justify-self: center;
+}
