@@ -10,7 +10,6 @@ function Book(title, author, pages, hasRead) {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
     };
 }
-let pages = 0;
 
 function addBookToLibrary() {
     // const title = prompt('Please enter the book\'s title:');
