@@ -17,50 +17,66 @@ function addBookToLibrary(title, author, pages, hasRead) {
     myLibrary.push(newBook);
 }
 
-// Example: Manually add a few books to the array
 addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 300, false);
 addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 250, false);
 addBookToLibrary('1984', 'George Orwell', 350, true);
-addBookToLibrary('1984', 'George Orwell', 350, true);
-addBookToLibrary('1984', 'George Orwell', 350, true);
-addBookToLibrary('1984', 'George Orwell', 350, true);
-addBookToLibrary('1984', 'George Orwell', 350, true);
-
 
 let newbookbtn = document.querySelector("#new-book-button");
-let newbookform = document.querySelector("#new-book-form");
 newbookbtn.addEventListener('click', () => newbookform.style.display = 'block');
+
+
+let newbookform = document.querySelector("#new-book-form");
+newbookform.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = parseInt(document.getElementById('number-of-pages').value, 10);
+    const hasRead = document.getElementById('hasRead').value;
+
+    if (!title || !author || isNaN(pages) || (hasRead !== 'yes' && hasRead !== 'no')) {
+        alert("Invalid input. Please make sure to provide valid values.");
+        return;
+    }
+
+    addBookToLibrary(title, author, pages, hasRead);
+    displayBooks();
+    newbookform.style.display = 'none';
+    newbookform.reset();
+});
+
+
 
 function displayBooks() {
     const bookContainer = document.getElementById('book-container');
 
-    // Clear existing book cards
     bookContainer.innerHTML = '';
 
     // Loop through the myLibrary array
     myLibrary.forEach((book, index) => {
-        // Create a div for each book card
         const card = document.createElement('div');
         card.classList.add('book-card');
 
-        // Fill the card with book information
+    
         card.innerHTML = `
             <h2>${book.title}</h2>
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p><strong>Read Status:</strong> ${book.hasRead ? 'Read' : 'Not Read Yet'}</p>
-            <button class="close-button" onclick="removeBook(${index})">Close</button>
+            <button class="close-button" onclick="removeBook(${index})">Remove Book</button>
         `;
-
-        // Append the card to the book container
         bookContainer.appendChild(card);
     });
 }
-
-// Call the displayBooks function to show the books on the page
 displayBooks();
+
+
 
 function removeBook(index) {
     myLibrary.splice(index, 1);
-    displayBooks(); // Update the display after removing the book
+    displayBooks(); 
 }
+
+const closeFormBtn = document.getElementById('close-form-btn');
+closeFormBtn.addEventListener('click', () => {
+    newbookform.style.display = 'none';
+});
