@@ -1,3 +1,4 @@
+
 const myLibrary = [];
 
 function Book(title, author, pages, hasRead) {
@@ -11,27 +12,49 @@ function Book(title, author, pages, hasRead) {
     };
 }
 
-function addBookToLibrary() {
-    // const title = prompt('Please enter the book\'s title:');
-    // const author = prompt('Enter the author\'s name:');
-    // const pages = parseInt(prompt('How many pages does this book have?'), 10);
-    // const hasRead = prompt("Have you read the book? (yes/no)").toLowerCase();
-
-    // if (!title || !author || isNaN(pages) || (hasRead !== 'yes' && hasRead !== 'no')) {
-    //     alert("Invalid input. Please make sure to provide valid values.");
-    //     return;
-    // }
-
+function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead === 'yes');
     myLibrary.push(newBook);
 }
 
-addBookToLibrary();
-console.log(myLibrary);
+// Example: Manually add a few books to the array
+addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 300, false);
+addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 250, false);
+addBookToLibrary('1984', 'George Orwell', 350, true);
+addBookToLibrary('1984', 'George Orwell', 350, true);
+addBookToLibrary('1984', 'George Orwell', 350, true);
+addBookToLibrary('1984', 'George Orwell', 350, true);
+addBookToLibrary('1984', 'George Orwell', 350, true);
+
 
 let newbookbtn = document.querySelector("#new-book-button");
 let newbookform = document.querySelector("#new-book-form");
 newbookbtn.addEventListener('click', () => newbookform.style.display = 'block');
 
+function displayBooks() {
+    const bookContainer = document.getElementById('book-container');
 
+    // Clear existing book cards
+    bookContainer.innerHTML = '';
 
+    // Loop through the myLibrary array
+    myLibrary.forEach(book => {
+        // Create a div for each book card
+        const card = document.createElement('div');
+        card.classList.add('book-card');
+
+        // Fill the card with book information
+        card.innerHTML = `
+            <h2>${book.title}</h2>
+            <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Pages:</strong> ${book.pages}</p>
+            <p><strong>Read Status:</strong> ${book.hasRead ? 'Read' : 'Not Read Yet'}</p>
+        `;
+
+        // Append the card to the book container
+        bookContainer.appendChild(card);
+    });
+}
+
+// Call the displayBooks function to show the books on the page
+displayBooks();
