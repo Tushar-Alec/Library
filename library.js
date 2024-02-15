@@ -38,7 +38,7 @@ function displayBooks() {
     bookContainer.innerHTML = '';
 
     // Loop through the myLibrary array
-    myLibrary.forEach(book => {
+    myLibrary.forEach((book, index) => {
         // Create a div for each book card
         const card = document.createElement('div');
         card.classList.add('book-card');
@@ -49,6 +49,7 @@ function displayBooks() {
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p><strong>Read Status:</strong> ${book.hasRead ? 'Read' : 'Not Read Yet'}</p>
+            <button class="close-button" onclick="removeBook(${index})">Close</button>
         `;
 
         // Append the card to the book container
@@ -58,3 +59,8 @@ function displayBooks() {
 
 // Call the displayBooks function to show the books on the page
 displayBooks();
+
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    displayBooks(); // Update the display after removing the book
+}
