@@ -10,6 +10,9 @@ function Book(title, author, pages, hasRead) {
         const readStatus = this.hasRead ? "read" : "not read yet";
         return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
     };
+    this.toggleReadStatus = function () {
+        this.hasRead = !this.hasRead;
+    };
 }
 
 function addBookToLibrary(title, author, pages, hasRead) {
@@ -56,18 +59,23 @@ function displayBooks() {
         const card = document.createElement('div');
         card.classList.add('book-card');
 
-    
         card.innerHTML = `
             <h2>${book.title}</h2>
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p><strong>Read Status:</strong> ${book.hasRead ? 'Read' : 'Not Read Yet'}</p>
+            <button class="toggle-read-status" onclick="toggleReadStatus(${index})">Toggle Read Status</button>
             <button class="close-button" onclick="removeBook(${index})">Remove Book</button>
         `;
         bookContainer.appendChild(card);
     });
 }
 displayBooks();
+
+function toggleReadStatus(index) {
+    myLibrary[index].toggleReadStatus();
+    displayBooks();
+}
 
 
 
@@ -80,6 +88,7 @@ const closeFormBtn = document.getElementById('close-form-btn');
 closeFormBtn.addEventListener('click', () => {
     newbookform.style.display = 'none';
 });
+
 
 
 
