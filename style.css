@@ -101,9 +101,13 @@ body {
     cursor: pointer;
     background-color: tomato;
     color: white;
+    margin: 5px;
 }
 .book-card button:hover {
     background-color: rgb(233, 52, 52);
+}
+.toggle-read-status {
+    background-color: #ccc;
 }
 #book-container {
    display: grid;
