@@ -20,7 +20,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
 }
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 300, false);
-addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 250, false);
+addBookToLibrary("The Art of War", "Sun Tzu", 250, false);
 addBookToLibrary("1984", "George Orwell", 350, false);
 
 let newbookbtn = document.querySelector("#new-book-button");
@@ -64,7 +64,7 @@ function displayBooks() {
     card.classList.add("book-card");
 
     card.innerHTML = `
-            <h2>${book.title}</h2>
+            <div>${book.title}</div>
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p class="read-status"><strong>Read Status:</strong> ${

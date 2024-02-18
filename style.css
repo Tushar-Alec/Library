@@ -79,9 +79,8 @@ body {
 }
 .book-card {
   border: 1px solid #ccc;
-  padding: 10px;
   margin: 10px;
-  width: 300px;
+  width: 330px;
   font-size: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -92,7 +91,7 @@ body {
   text-align: center;
 }
 .close-button {
-  width: 270px;
+  width: 290px;
   height: 40px;
   border-radius: 5px;
   font-size: 18px;
@@ -103,7 +102,7 @@ body {
   margin: 5px;
 }
 .toggle-read-status {
-  width: 270px;
+  width: 290px;
   height: 40px;
   border-radius: 5px;
   font-size: 18px;
@@ -152,7 +151,17 @@ header svg {
 }
 
 .read-status {
-  width: 180px;
   display: flex;
-  gap: 5px;
+  gap: 6px;
+}
+
+.book-card p {
+    font-size: 25px;
+}
+.book-card div {
+    width: 100%;
+    background-color: rgb(234, 234, 39);
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 600;
 }
