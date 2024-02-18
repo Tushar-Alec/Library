@@ -63,18 +63,20 @@ function displayBooks() {
     const card = document.createElement("div");
     card.classList.add("book-card");
 
+    const randomColor = getRandomColor();
+
     card.innerHTML = `
-            <div>${book.title}</div>
-            <p><strong>Author:</strong> ${book.author}</p>
-            <p><strong>Pages:</strong> ${book.pages}</p>
-            <p class="read-status"><strong>Read Status:</strong> ${
-              book.hasRead ? "Read" : "Not Read Yet"
-            }</p>
-            <button class="toggle-read-status" onclick="toggleReadStatus(${index})">Toggle Read Status</button>
-            <button class="close-button" onclick="removeBook(${index})">Remove Book</button>
-        `;
-    bookContainer.appendChild(card);
-  });
+    <div style="background-color: ${randomColor};">${book.title}</div>
+    <p><strong>Author:</strong> ${book.author}</p>
+    <p><strong>Pages:</strong> ${book.pages}</p>
+    <p class="read-status"><strong>Read Status:</strong> ${
+      book.hasRead ? "Read" : "Not Read Yet"
+    }</p>
+    <button class="toggle-read-status" onclick="toggleReadStatus(${index})">Toggle Read Status</button>
+    <button class="close-button" onclick="removeBook(${index})">Remove Book</button>
+`;
+bookContainer.appendChild(card);
+});
 }
 displayBooks();
 
@@ -91,4 +93,15 @@ function removeBook(index) {
 const closeFormBtn = document.getElementById("close-form-btn");
 closeFormBtn.addEventListener("click", () => {
   newbookform.style.display = "none";
+  
 });
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+

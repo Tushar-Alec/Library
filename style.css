@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 #new-book-button {
   display: flex;
@@ -160,7 +161,6 @@ header svg {
 }
 .book-card div {
     width: 100%;
-    background-color: rgb(234, 234, 39);
     font-size: 35px;
     font-style: italic;
     font-weight: 600;
