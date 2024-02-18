@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="library.js" defer></script>
     <title>Library App</title>
-</head>
-<body>
-    <header><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>library</title><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg><p>Library</p></header>
+  </head>
+  <body>
+    <header>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <title>library</title>
+        <path
+          d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z"
+        />
+      </svg>
+      <p>Library</p>
+    </header>
     <div class="newbook-container">
-    <button id="new-book-button">+ New Book</button>
+      <button id="new-book-button">+ New Book</button>
 
-    <form id="new-book-form" action="" style="display: none;">
-        <svg id="close-form-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-        
+      <form id="new-book-form" action="" style="display: none">
+        <svg
+          id="close-form-btn"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <title>close</title>
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+
         <label for="title">Title</label>
-        <input type="text" id="title" name="title"><br><br>
-        
+        <input type="text" id="title" name="title" /><br /><br />
+
         <label for="author">Author(s)</label>
-        <input type="text" id="author" name="author"><br><br>
+        <input type="text" id="author" name="author" /><br /><br />
 
         <label for="pages">Number Of Pages</label>
-        <input type="number" id="number-of-pages" name="number-of-pages"><br><br>
+        <input
+          type="number"
+          id="number-of-pages"
+          name="number-of-pages"
+        /><br /><br />
 
         <label for="hasRead">Have you read it ?</label>
         <select id="hasRead" name="hasRead">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
-        <br><br>
+        <br /><br />
         <button id="addBook">Add Book</button>
-    </form>
-    <div id="book-container"></div>
-</div>
-</body>
+      </form>
+      <div id="book-container"></div>
+    </div>
+  </body>
 </html>

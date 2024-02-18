@@ -5,155 +5,154 @@ body {
   background-color: rgb(217, 216, 216);
 }
 .newbook-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #new-book-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 200px;
-    color: #4CAF50;
-    font-size: 23px;
-    margin: 75px;
-    background-color: white;
-    border: 0px solid #4CAF50;
-    cursor: pointer;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  color: #4caf50;
+  font-size: 23px;
+  margin: 75px;
+  background-color: white;
+  border: 0px solid #4caf50;
+  cursor: pointer;
+  font-weight: 700;
 }
 #new-book-button:hover {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 
 #new-book-form {
-      position: fixed;
-      background-color: #4CAF50;
-      padding: 30px;
-      border-radius: 30px;
-      width: 300px;
-      height: auto;
-      top: 65%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
+  position: fixed;
+  background-color: #4caf50;
+  padding: 30px;
+  border-radius: 30px;
+  width: 300px;
+  height: auto;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
 }
 #new-book-form select {
-    border-radius: 22px;
-    width: 300px;
-    height: 25px;
-    outline: none;
-    border: none;
-    padding: 4px;
-    background-color: white;
+  border-radius: 22px;
+  width: 300px;
+  height: 25px;
+  outline: none;
+  border: none;
+  padding: 4px;
+  background-color: white;
 }
 #new-book-form button {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 #new-book-form input {
-    border-radius: 22px;
-    width: 300px;
-    height: 22px;
-    outline: none;
-    border: none;
-    padding: 4px;
+  border-radius: 22px;
+  width: 300px;
+  height: 22px;
+  outline: none;
+  border: none;
+  padding: 4px;
 }
 #new-book-form label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 #addBook {
-    border: none;
-    color: black;
-    padding: 16px 20px;
-    cursor: pointer;
-    font-size: 16px;
+  border: none;
+  color: black;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 16px;
 }
 .book-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .close-button {
-    width: 270px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: tomato;
-    color: white;
-    margin: 5px;
+  width: 270px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: tomato;
+  color: white;
+  margin: 5px;
 }
 .toggle-read-status {
-    width: 270px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: rgb(53, 176, 176);
-    color: white;
-    margin: 5px;
+  width: 270px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(53, 176, 176);
+  color: white;
+  margin: 5px;
 }
 .close-button:hover {
-    background-color: rgb(233, 52, 52);
+  background-color: rgb(233, 52, 52);
 }
 
 .toggle-read-status:hover {
-    background-color: teal;
+  background-color: teal;
 }
 #book-container {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(270px, 1fr));
-   gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  gap: 20px;
 }
 
-#close-form-btn{
-    width: 30px;
-    float: right;
-    fill: white;
-    cursor: pointer;
-    margin-left: -20px;
+#close-form-btn {
+  width: 30px;
+  float: right;
+  fill: white;
+  cursor: pointer;
+  margin-left: -20px;
 }
 header {
-    height: 60px;
-    background-color: #4CAF50;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    color: white;
+  height: 60px;
+  background-color: #4caf50;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: white;
 }
 header p {
-    font-size: 45px;
-    margin: 10px;
-
+  font-size: 45px;
+  margin: 10px;
 }
 header svg {
-    width: 70px;
-    fill: white;
-    margin-left: 70px;
+  width: 70px;
+  fill: white;
+  margin-left: 70px;
 }
 
 .read-status {
-    width: 180px;
-    display: flex;
-    gap: 5px;
+  width: 180px;
+  display: flex;
+  gap: 5px;
 }
