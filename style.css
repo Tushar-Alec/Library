@@ -76,13 +76,13 @@ body {
     padding: 16px 20px;
     cursor: pointer;
     font-size: 16px;
-    
 }
 .book-card {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     width: 300px;
+    font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     display: flex;
@@ -90,9 +90,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
-.book-card button {
+.close-button {
     width: 270px;
     height: 40px;
     border-radius: 5px;
@@ -103,11 +102,23 @@ body {
     color: white;
     margin: 5px;
 }
-.book-card button:hover {
+.toggle-read-status {
+    width: 270px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(53, 176, 176);
+    color: white;
+    margin: 5px;
+}
+.close-button:hover {
     background-color: rgb(233, 52, 52);
 }
-.toggle-read-status {
-    background-color: #ccc;
+
+.toggle-read-status:hover {
+    background-color: teal;
 }
 #book-container {
    display: grid;
@@ -139,4 +150,10 @@ header svg {
     width: 70px;
     fill: white;
     margin-left: 70px;
+}
+
+.read-status {
+    width: 180px;
+    display: flex;
+    gap: 5px;
 }
