@@ -21,7 +21,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 300, false);
 addBookToLibrary("The Art of War", "Sun Tzu", 250, false);
-addBookToLibrary("1984", "George Orwell", 350, false);
+addBookToLibrary("Atomic Habits", "James Clear", 320, false);
 
 let newbookbtn = document.querySelector("#new-book-button");
 newbookbtn.addEventListener(
