@@ -19,7 +19,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
   myLibrary.push(newBook);
 }
 
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 300, false);
+addBookToLibrary("Mazhi Janmthep", "V. D. Savarkar", 488, false);
 addBookToLibrary("The Art of War", "Sun Tzu", 250, false);
 addBookToLibrary("Atomic Habits", "James Clear", 320, false);
 
