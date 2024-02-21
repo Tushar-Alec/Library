@@ -2,7 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(217, 216, 216);
 }
 .newbook-container {
   display: flex;
@@ -100,7 +99,7 @@ body {
   cursor: pointer;
   background-color: tomato;
   color: white;
-  margin: 5px;
+  margin-bottom: 15px;
 }
 .toggle-read-status {
   width: 290px;
@@ -164,4 +163,54 @@ header svg {
     font-size: 35px;
     font-style: italic;
     font-weight: 600;
+}
+
+:root.light {
+  --border-btn: 1px solid rgb(220, 220, 220);
+  --color-base-text: white;
+  --color-btn-bg: rgb(36, 36, 36);
+  --color-base-bg: rgb(217, 216, 216);
+  --color-card-bg: rgb(50, 43, 43);
+  --color-logo: black;
+  --svg-fill: black;
+}
+
+:root.dark {
+  --border-btn: 1px solid rgb(36, 36, 36);
+  --color-base-text: black;
+  --color-btn-bg: rgb(220, 220, 220);
+  --color-base-bg: rgb(32, 32, 32);
+  --color-card-bg: white;
+  --color-logo: white;
+  --svg-fill: white;
+}
+
+body,
+.theme-toggle {
+  color: var(--color-base-text);
+}
+
+body {
+  background-color: var(--color-base-bg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theme-toggle {
+  width: 40px;
+  fill: var(--svg-fill);
+  margin-left: 1000px;
+}
+
+
+.theme-toggle:hover {
+  cursor: pointer;
+}
+
+.book-card {
+  background-color: var(--color-card-bg);
+  border: none;
 }
