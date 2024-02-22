@@ -18,10 +18,30 @@
   --svg-fill: white;
 }
 
+[data-theme='light'] {
+  --border-btn: 1px solid rgb(220, 220, 220);
+  --color-base-text: white;
+  --color-btn-bg: rgb(36, 36, 36);
+  --color-base-bg: rgb(217, 216, 216);
+  --color-card-bg: rgb(50, 43, 43);
+  --color-logo: black;
+  --svg-fill: black;
+}
+
+[data-theme='dark'] {
+  --border-btn: 1px solid rgb(36, 36, 36);
+  --color-base-text: black;
+  --color-btn-bg: rgb(220, 220, 220);
+  --color-base-bg: rgb(32, 32, 32);
+  --color-card-bg: white;
+  --color-logo: white;
+  --svg-fill: white;
+}
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-base-bg);
 }
 .newbook-container {
   display: flex;
@@ -189,10 +209,6 @@ header svg {
 body,
 .theme-toggle {
   color: var(--color-base-text);
-}
-
-body {
-  background-color: var(--color-base-bg);
 }
 .container {
   display: flex;
