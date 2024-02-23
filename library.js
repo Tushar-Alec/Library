@@ -118,7 +118,6 @@ document.querySelector('.theme-toggle').addEventListener('click', setTheme)
 
 const isDarkMode = false;
 
-// Apply the initial theme
 document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
 
 document.body.style.display = 'block';
