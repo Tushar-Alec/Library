@@ -6,6 +6,7 @@
   --color-card-bg: rgb(50, 43, 43);
   --color-logo: black;
   --svg-fill: black;
+  --newbook-btn-bg: rgb(50, 43, 43);
 }
 
 :root.dark {
@@ -16,6 +17,7 @@
   --color-card-bg: white;
   --color-logo: white;
   --svg-fill: white;
+  --newbook-btn-bg: white;
 }
 
 [data-theme='light'] {
@@ -26,6 +28,7 @@
   --color-card-bg: rgb(50, 43, 43);
   --color-logo: black;
   --svg-fill: black;
+  --newbook-btn-bg: rgb(50, 43, 43);
 }
 
 [data-theme='dark'] {
@@ -36,6 +39,7 @@
   --color-card-bg: white;
   --color-logo: white;
   --svg-fill: white;
+  --newbook-btn-bg: white;
 }
 html,
 body {
@@ -59,7 +63,7 @@ body {
   color: #4caf50;
   font-size: 23px;
   margin: 75px;
-  background-color: white;
+  background-color: var(--newbook-btn-bg);
   border: 0px solid #4caf50;
   cursor: pointer;
   font-weight: 700;
