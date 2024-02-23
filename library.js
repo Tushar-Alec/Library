@@ -75,8 +75,8 @@ function displayBooks() {
     <button class="toggle-read-status" onclick="toggleReadStatus(${index})">Toggle Read Status</button>
     <button class="close-button" onclick="removeBook(${index})">Remove Book</button>
 `;
-bookContainer.appendChild(card);
-});
+    bookContainer.appendChild(card);
+  });
 }
 displayBooks();
 
@@ -93,7 +93,6 @@ function removeBook(index) {
 const closeFormBtn = document.getElementById("close-form-btn");
 closeFormBtn.addEventListener("click", () => {
   newbookform.style.display = "none";
-  
 });
 
 function getRandomColor() {
@@ -107,17 +106,19 @@ function getRandomColor() {
 
 function setTheme() {
   const root = document.documentElement;
-  const newTheme = root.className === 'dark' ? 'light' : 'dark';
+  const newTheme = root.className === "dark" ? "light" : "dark";
   root.className = newTheme;
-  
-  document.querySelector('.theme-name').textContent = newTheme;
+
+  document.querySelector(".theme-name").textContent = newTheme;
 }
 
-document.querySelector('.theme-toggle').addEventListener('click', setTheme)
-
+document.querySelector(".theme-toggle").addEventListener("click", setTheme);
 
 const isDarkMode = false;
 
-document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+document.documentElement.setAttribute(
+  "data-theme",
+  isDarkMode ? "dark" : "light"
+);
 
-document.body.style.display = 'block';
+document.body.style.display = "block";

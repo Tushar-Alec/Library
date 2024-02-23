@@ -20,7 +20,7 @@
   --newbook-btn-bg: white;
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --border-btn: 1px solid rgb(220, 220, 220);
   --color-base-text: white;
   --color-btn-bg: rgb(36, 36, 36);
@@ -31,7 +31,7 @@
   --newbook-btn-bg: rgb(50, 43, 43);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --border-btn: 1px solid rgb(36, 36, 36);
   --color-base-text: black;
   --color-btn-bg: rgb(220, 220, 220);
