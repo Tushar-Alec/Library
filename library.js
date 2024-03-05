@@ -120,5 +120,6 @@ document.documentElement.setAttribute(
   "data-theme",
   isDarkMode ? "dark" : "light"
 );
-
 document.body.style.display = "block";
+
+
