@@ -1,15 +1,32 @@
 const myLibrary = [];
 
-function Book(title, author, pages, hasRead) {
+// function Book(title, author, pages, hasRead) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.hasRead = hasRead;
+//   this.info = function () {
+//     const readStatus = this.hasRead ? "read" : "not read yet";
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
+//   };
+//   this.toggleReadStatus = function () {
+//     this.hasRead = !this.hasRead;
+//   };
+// }
+
+// using class 
+class Book {
+constructor(title, author, pages, hasRead) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.hasRead = hasRead;
-  this.info = function () {
+}
+  info() {
     const readStatus = this.hasRead ? "read" : "not read yet";
     return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
   };
-  this.toggleReadStatus = function () {
+  toggleReadStatus() {
     this.hasRead = !this.hasRead;
   };
 }
